@@ -8,6 +8,10 @@
   * { box-sizing: border-box; }
   body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
   .topo-flex { display: flex; justify-content: space-between; align-items: center; }
+  #menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+  #menu li { margin-right: 20px; }
+  #trilha ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+  #trilha li + li::before { content: " > "; padding: 0 5px; color: #5b6478; }
   th, td { border:1px solid #d9dee9; padding:9px 11px; text-align:left; }
   th.cab { background:#eef0f5; font-weight:700; }
   .wrap { max-width: 1040px; margin: 0 auto; background:#fff; }
@@ -15,8 +19,8 @@
   .titulo-principal { font-size: 30px; font-weight: 800; letter-spacing:-.5px; }
   .subtitulo { color:#b9c4de; font-size:14px; }
   #menu { background:#2c3a5e; padding:10px 24px; }
-  #menu span a { color:#fff; text-decoration:none; margin-right:20px; font-size:15px; display:inline-block; padding:4px 0; }
-  #menu span a:hover { text-decoration:underline; }
+  #menu a { color: #fff; text-decoration: none; font-size: 15px; display: inline-block; padding: 4px 0; }
+  #menu a:hover { text-decoration: underline; }
   #trilha { padding:10px 24px; font-size:13px; color:#5b6478; background:#eef0f5; }
   #trilha a { color:#5b6478; }
   #miolo { display:flex; gap:28px; padding:24px; align-items:flex-start; }
@@ -28,7 +32,7 @@
   h2 { font-size:21px; }
   h6 { font-size:17px; font-weight:700; }
   .cartao { border:1px solid #e0e4ee; border-radius:8px; padding:14px; margin:10px 0; }
-  .botao { display:inline-block; background:#c0392b; color:#fff; padding:9px 16px; border-radius:6px; cursor:pointer; font-weight:600; font-size:14px; }
+  .botao { display:inline-block; background:#c0392b; color:#fff; padding:9px 16px; border-radius:6px; cursor:pointer; font-weight:600; font-size:14px; border: none; font-family: inherit; }
   table { border-collapse: collapse; width:100%; margin:14px 0; font-size:14px; }
   td { border:1px solid #d9dee9; padding:9px 11px; }
   .layout td { border:none; padding:0; vertical-align: top; }
@@ -38,12 +42,12 @@
   #rodape { background:#1f2a44; color:#b9c4de; padding:20px 24px; font-size:13px; margin-top:10px; }
   #rodape a { color:#dbe2f2; }
   .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
+  ul.produtos-lista { list-style: none; padding: 0; margin: 0; }
 </style>
 </head>
 <body>
 
 <div class="wrap">
-
 <table class="layout" width="100%">
 <tr>
 <td>
@@ -58,26 +62,26 @@
         <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Ir para o carrinho de compras">
       </a>
     </div>
-    </div>
-  </header>
+  </div>
+</header>
 
-  <nav id="menu" aria-label="Navegação Principal">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="guitarras.html">Guitarras</a></li>
-      <li><a href="baterias.html">Baterias</a></li>
-      <li><a href="teclados.html">Teclados</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+<nav id="menu" aria-label="Navegação Principal">
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="guitarras.html">Guitarras</a></li>
+    <li><a href="baterias.html">Baterias</a></li>
+    <li><a href="teclados.html">Teclados</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
 
-  <nav id="trilha" aria-label="Trilha de navegação">
-    <ol>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="guitarras.html">Guitarras</a></li>
-      <li aria-current="page">Guitarras Elétricas</li>
-    </ol>
-  </nav>
+<nav id="trilha" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="guitarras.html">Guitarras</a></li>
+    <li aria-current="page">Guitarras Elétricas</li>
+  </ol>
+</nav>
 </td>
 </tr>
 </table>
@@ -104,17 +108,18 @@
 
     <h3>Guitarras Elétricas</h3>
 
-    <div class="cartao">
-      <strong>Stratocaster HSS</strong><br>
-      R$ 4.290,00<br>
-      <button type="button" class="botao">Adicionar a Stratocaster HSS ao carrinho</button>
-    </div>
-
-    <div class="cartao">
-      <strong>Les Paul Standard</strong><br>
-      R$ 7.150,00<br>
-      <button type="button" class="botao">Adicionar a Les Paul Standard ao carrinho</button>
-    </div>
+    <ul class="produtos-lista">
+      <li class="cartao">
+        <strong>Stratocaster HSS</strong><br>
+        R$ 4.290,00<br>
+        <button type="button" class="botao" onclick="adicionarCarrinho(101)">Adicionar a Stratocaster HSS ao carrinho</button>
+      </li>
+      <li class="cartao">
+        <strong>Les Paul Standard</strong><br>
+        R$ 7.150,00<br>
+        <button type="button" class="botao" onclick="adicionarCarrinho(102)">Adicionar a Les Paul Standard ao carrinho</button>
+      </li>
+     </ul>
 
     <h2>Baterias</h2>
 
@@ -126,13 +131,13 @@
 
     <h2>Categorias em destaque</h2>
 
-    <div class="lista-falsa">
-      Guitarras e Baixos<br>
-      Baterias e Percussão<br>
-      Teclados e Sintetizadores<br>
-      Microfones<br>
-      Acessórios<br>
-    </div>
+    <ul class="destaques-lista">
+      <li>Guitarras e Baixos</li>
+      <li>Baterias e Percussão</li>
+      <li>Teclados e Sintetizadores</li>
+      <li>Microfones</li>
+      <li>Acessórios</li>
+    </ul>
 
     <h2>Comparativo de modelos</h2>
 
@@ -207,9 +212,11 @@
 
   <aside class="lateral" aria-label="Conteúdo complementar">
     <h3>Conteúdo relacionado</h3>
-    Aprenda a <a href="afinacao.html">afinar sua guitarra passo a passo</a>.<br><br>
-    <a href="manutencao.html">Saiba mais sobre manutenção preventiva de instrumentos musicais</a>.<br><br>
-    Acesse o <a href="blog.html" target="_blank">nosso blog de música e novidades (abre em nova aba)</a>.
+    <ul class="lateral-lista">
+      <li>Aprenda a <a href="afinacao.html">afinar sua guitarra passo a passo</a>.</li>
+      <li><a href="manutencao.html">Saiba mais sobre manutenção preventiva de instrumentos musicais</a>.</li>
+      <li>Acesse o <a href="blog.html" target="_blank">nosso blog de música e novidades (abre em nova aba)</a>.</li>
+    </ul>
   </aside>
 
 </div>
