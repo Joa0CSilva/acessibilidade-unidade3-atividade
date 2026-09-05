@@ -62,15 +62,21 @@
   </header>
 
   <nav id="menu" aria-label="Navegação Principal">
-    <span><a href="index.html">Início</a></span>
-    <span><a href="guitarras.html">Guitarras</a></span>
-    <span><a href="baterias.html">Baterias</a></span>
-    <span><a href="teclados.html">Teclados</a></span>
-    <span><a href="contato.html">Contato</a></span>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li><a href="baterias.html">Baterias</a></li>
+      <li><a href="teclados.html">Teclados</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
   </nav>
 
   <nav id="trilha" aria-label="Trilha de navegação">
-    <a href="index.html">Início</a> &gt; <a href="guitarras.html">Guitarras</a> &gt; Guitarras Elétricas
+    <ol>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li aria-current="page">Guitarras Elétricas</li>
+    </ol>
   </nav>
 </td>
 </tr>
@@ -101,13 +107,13 @@
     <div class="cartao">
       <strong>Stratocaster HSS</strong><br>
       R$ 4.290,00<br>
-      <button type="button" class="botao" onclick="adicionarCarrinho(101)">Adicionar a Stratocaster HSS ao carrinho</button>
+      <button type="button" class="botao">Adicionar a Stratocaster HSS ao carrinho</button>
     </div>
 
     <div class="cartao">
       <strong>Les Paul Standard</strong><br>
       R$ 7.150,00<br>
-      <button type="button" class="botao" onclick="adicionarCarrinho(102)">Adicionar a Les Paul Standard ao carrinho</button>
+      <button type="button" class="botao">Adicionar a Les Paul Standard ao carrinho</button>
     </div>
 
     <h2>Baterias</h2>
