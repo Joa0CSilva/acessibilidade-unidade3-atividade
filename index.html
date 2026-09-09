@@ -45,6 +45,7 @@
   ul.produtos-lista { list-style: none; padding: 0; margin: 0; }
   label { font-weight:600; margin:14px 0 6px; }
   .erro-msg { color: red; font-size: 12px; display: none; }
+  input:invalid + .erro-msg { display: block }
 </style>
 </head>
 <body>
@@ -181,20 +182,18 @@
     <form action="/enviar" method="post">
 
       <label>Nome Completo</label>
-      <input type="text" id="nome" placeholder="Digite seu nome completo">
-      <span id="mensagemErro" class="erro-msg">Este campo é obrigatório.</span>
+      <input type="text" id="nome" placeholder="Digite seu nome completo" required>
 
       <label>E-mail</label>
-      <input type="email" id="email" placeholder="E-mail *">
-      <span id="mensagemErro" class="erro-msg">Este campo é obrigatório.</span>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <span class="erro-msg">E-mail inválido</span>
 
       <label>Telefone</label>
-      <input type="text" id="telefone" placeholder="(00) 00000-0000">
-      <span id="mensagemErro" class="erro-msg">Este campo é obrigatório.</span>
+      <input type="text" id="telefone" placeholder="(00) 00000-0000" required>
+      <span class="erro-msg">Telefone inválido</span>
      
       <label>Senha</label>
-      <input type="password" id="senha" placeholder="Crie uma senha">
-      <span id="mensagemErro" class="erro-msg">Este campo é obrigatório.</span>
+      <input type="password" id="senha" placeholder="Crie uma senha" required>
      
       <div style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</div>
       <div>
