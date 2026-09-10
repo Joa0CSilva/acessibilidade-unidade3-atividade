@@ -7,6 +7,8 @@
 <style>
   * { box-sizing: border-box; }
   body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
+  .pular-link { position:absolute; left:-9999px; top:0; background:#1f2a44; color:#fff; padding:10px 16px; z-index:100; border-radius:0 0 6px 0; }
+  .pular-link:focus { left:0; }
   .topo-flex { display: flex; justify-content: space-between; align-items: center; }
   #menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
   #menu li { margin-right: 20px; }
@@ -35,7 +37,6 @@
   .botao { display:inline-block; background:#c0392b; color:#fff; padding:9px 16px; border-radius:6px; cursor:pointer; font-weight:600; font-size:14px; border: none; font-family: inherit; }
   table { border-collapse: collapse; width:100%; margin:14px 0; font-size:14px; }
   td { border:1px solid #d9dee9; padding:9px 11px; }
-  .layout td { border:none; padding:0; vertical-align: top; }
   .cab { background:#eef0f5; font-weight:700; }
   input[type=text], input[type=email], input[type=password] { width:100%; padding:9px; border:1px solid #c3c9d6; border-radius:5px; margin-bottom:12px; font-size:14px; }
   .erro { color:#c0392b; font-size:13px; margin:-6px 0 12px; }
@@ -43,62 +44,60 @@
   #rodape a { color:#dbe2f2; }
   .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
   ul.produtos-lista { list-style: none; padding: 0; margin: 0; }
-  label { font-weight:600; margin:14px 0 6px; }
+  label { font-weight:600; margin:14px 0 6px; display:block; }
+  fieldset { border:1px solid #c3c9d6; border-radius:5px; padding:12px 14px; margin-bottom:14px; }
+  legend { font-weight:600; padding:0 4px; }
   .erro-msg { color: red; font-size: 12px; display: none; }
   input:invalid + .erro-msg { display: block }
 </style>
 </head>
 <body>
 
+<a class="pular-link" href="#conteudo">Pular para o conteúdo principal</a>
+
 <div class="wrap">
-<table class="layout" width="100%">
-<tr>
-<td>
   <header id="topo">
-  <div class="topo-flex">
-    <div>
-      <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
-      <div class="subtitulo">Tudo para o seu som desde 1998</div>
+    <div class="topo-flex">
+      <div>
+        <div class="titulo-principal">Harmonia Instrumentos Musicais</div>
+        <div class="subtitulo">Tudo para o seu som desde 1998</div>
+      </div>
+      <div>
+        <a href="carrinho.html" aria-label="Carrinho de compras">
+          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Ir para o carrinho de compras">
+        </a>
+      </div>
     </div>
-    <div>
-      <a href="carrinho.html" aria-label="Carrinho de compras">
-        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Ir para o carrinho de compras">
-      </a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<nav id="menu" aria-label="Navegação Principal">
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="guitarras.html">Guitarras</a></li>
-    <li><a href="baterias.html">Baterias</a></li>
-    <li><a href="teclados.html">Teclados</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
+  <nav id="menu" aria-label="Navegação Principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li><a href="baterias.html">Baterias</a></li>
+      <li><a href="teclados.html">Teclados</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-<nav id="trilha" aria-label="Trilha de navegação">
-  <ol>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="guitarras.html">Guitarras</a></li>
-    <li aria-current="page">Guitarras Elétricas</li>
-  </ol>
-</nav>
-</td>
-</tr>
-</table>
+  <nav id="trilha" aria-label="Trilha de navegação">
+    <ol>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li aria-current="page">Guitarras Elétricas</li>
+    </ol>
+  </nav>
 
 <div id="miolo">
 
   <main id="conteudo">
 
-    <h2>Loja de Instrumentos</h2>
+    <h1>Loja de Instrumentos</h1>
 
     <p>
       Bem-vindo à nossa loja. Trabalhamos com <strong>as melhores marcas</strong> do mercado e oferecemos
       <em>garantia estendida</em> em todos os produtos. Nossa nova <u>política de trocas</u> entrou em vigor
-      neste mês. Para saber mais <a href="politica.html">clique aqui</a>.
+      neste mês. Para saber mais, <a href="politica.html">leia a política de trocas completa</a>.
     </p>
 
     <h2>Guitarras</h2>
@@ -106,7 +105,7 @@
     <p>
       Confira nossa linha completa de guitarras elétricas e acústicas. Todos os modelos passam por
       revisão técnica antes do envio. Veja o catálogo completo em PDF,
-      <a href="catalogo.pdf" target="_blank">clique aqui</a>.
+      <a href="catalogo.pdf" target="_blank" rel="noopener noreferrer">abra o catálogo em PDF (abre em nova aba)</a>.
     </p>
 
     <h3>Guitarras Elétricas</h3>
@@ -181,35 +180,35 @@
 
     <form action="/enviar" method="post">
 
-      <label>Nome Completo</label>
-      <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
-      <label>E-mail</label>
-      <input type="email" id="email" placeholder="E-mail" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="E-mail" required>
       <span class="erro-msg">E-mail inválido</span>
 
-      <label>Telefone</label>
-      <input type="text" id="telefone" placeholder="(00) 00000-0000" required>
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000">
       <span class="erro-msg">Telefone inválido</span>
      
-      <label>Senha</label>
-      <input type="password" id="senha" placeholder="Crie uma senha" required>
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Crie uma senha">
      
-      <div style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</div>
-      <div>
-        <input type="radio" name="turno" id="manha" value="manha"> Manhã<br>
-        <input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br>
-        <input type="radio" name="turno" id="noite" value="noite"> Noite
-      </div>
+      <fieldset>
+        <legend>Turno preferido para contato *</legend>
+        <label for="manha"><input type="radio" name="turno" id="manha" value="manha" required> Manhã</label>
+        <label for="tarde"><input type="radio" name="turno" id="tarde" value="tarde"> Tarde</label>
+        <label for="noite"><input type="radio" name="turno" id="noite" value="noite"> Noite</label>
+      </fieldset>
 
-      <div style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</div>
-      <div>
-        <input type="checkbox" name="int" id="i1"> Guitarras<br>
-        <input type="checkbox" name="int" id="i2"> Baterias<br>
-        <input type="checkbox" name="int" id="i3"> Teclados
-      </div>
+      <fieldset>
+        <legend>Assuntos de interesse</legend>
+        <label for="i1"><input type="checkbox" name="int" id="i1"> Guitarras</label>
+        <label for="i2"><input type="checkbox" name="int" id="i2"> Baterias</label>
+        <label for="i3"><input type="checkbox" name="int" id="i3"> Teclados</label>
+      </fieldset>
 
-      <p><a href="#" onclick="enviarFormulario()" class="botao">Enviar</a></p>
+      <p><button type="submit" class="botao">Enviar</button></p>
 
     </form>
 
@@ -220,7 +219,7 @@
     <ul class="lateral-lista">
       <li>Aprenda a <a href="afinacao.html">afinar sua guitarra passo a passo</a>.</li>
       <li><a href="manutencao.html">Saiba mais sobre manutenção preventiva de instrumentos musicais</a>.</li>
-      <li>Acesse o <a href="blog.html" target="_blank">nosso blog de música e novidades (abre em nova aba)</a>.</li>
+      <li>Acesse o <a href="blog.html" target="_blank" rel="noopener noreferrer">nosso blog de música e novidades (abre em nova aba)</a>.</li>
     </ul>
   </aside>
 
