@@ -7,8 +7,8 @@
 <style>
   * { box-sizing: border-box; }
   body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
-  .pular-link { position:absolute; left:-9999px; top:0; background:#1f2a44; color:#fff; padding:10px 16px; z-index:100; border-radius:0 0 6px 0; }
-  .pular-link:focus { left:0; }
+  .skip-link { position:absolute; left:-9999px; top:0; background:#1f2a44; color:#fff; padding:10px 16px; z-index:100; border-radius:0 0 6px 0; }
+  .skip-link:focus { left: 10px; background: #fff; color: #000; padding: 10px 16px; z-index: 1000; border: 2px solid #000;}
   .topo-flex { display: flex; justify-content: space-between; align-items: center; }
   #menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
   #menu li { margin-right: 20px; }
@@ -49,11 +49,12 @@
   legend { font-weight:600; padding:0 4px; }
   .erro-msg { color: red; font-size: 12px; display: none; }
   input:invalid + .erro-msg { display: block }
+
 </style>
 </head>
 <body>
 
-<a class="pular-link" href="#conteudo">Pular para o conteúdo principal</a>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
 <div class="wrap">
   <header id="topo">
@@ -90,7 +91,7 @@
 
 <div id="miolo">
 
-  <main id="conteudo">
+  <main id="conteudo-principal" tabindex="1">
 
     <h1>Loja de Instrumentos</h1>
 
@@ -218,14 +219,14 @@
   <h2 id="titulo-relacionado">Conteúdo relacionado</h2>
   <ul class="lateral-lista">
     <li>
-      <a href="afinacao.html">Guia passo a passo para afinar sua guitarra</a>
+      <a href="afinacao.html">Guia</a> <a>passo para afinar sua guitarra</a>
     </li>
     <li>
-      <a href="manutencao.html">Dicas de manutenção preventiva para instrumentos musicais</a>
+      <a href="manutencao.html">Dicas</a> <a>de manutenção preventiva para instrumentos musicais</a>
     </li>
     <li>
       <a href="blog.html" target="_blank" rel="noopener noreferrer">
-        Nosso blog de música e novidades <span class="sr-only">(abre em nova aba)</span>
+        Nosso blog</a> <a> música e novidades <span class="sr-only">(abre em nova aba)</span>
       </a>
     </li>
   </ul>
