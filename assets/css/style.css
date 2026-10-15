@@ -403,6 +403,118 @@ input:invalid+.erro-msg {
     object-fit: contain;
 }
 
+/* ==========================================
+   CAMPOS DA PÁGINA DE CONTATO
+========================================== */
+
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 5px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    background: var(--cor-input-fundo);
+    color: var(--cor-input-texto);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+small {
+    display: block;
+    margin: -4px 0 12px;
+    font-size: 13px;
+    color: var(--cor-dica);
+}
+
+.obrigatorio {
+    color: var(--cor-obrigatorio);
+    font-weight: bold;
+}
+
+.erro-msg {
+    color: var(--cor-erro);
+    font-size: 12px;
+    margin: -6px 0 12px;
+    display: none;
+}
+
+input:invalid + .erro-msg {
+    display: block;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid var(--cor-link);
+    outline-offset: 2px;
+}
+
+fieldset {
+    border: 1px solid var(--cor-fieldset-borda);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+}
+
+legend {
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.formulario-contato {
+    max-width: 700px;
+}
+
+.formulario-contato .botao {
+    margin-top: 12px;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    overflow: hidden;
+}
+
+/* Destaque visual para campos obrigatórios */
+
+input:required,
+select:required {
+    border-left: 4px solid var(--cor-obrigatorio);
+}
+
+/* Campo válido */
+
+input:valid,
+select:valid {
+    border-color: #2e7d32;
+}
+
+/* Campo inválido */
+
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--cor-erro);
+}
+
 @media (prefers-color-scheme: dark) {
 
     :root {
