@@ -243,7 +243,7 @@ h6 {
         box-shadow .3s ease;
 }
 
-button:hover {
+.botao:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px var(--cor-sombra);
 }
@@ -387,6 +387,7 @@ input:invalid+.erro-msg {
 }
 
 .carrossel {
+    position: relative;
     overflow: hidden;
     width: 100%;
 }
@@ -401,6 +402,38 @@ input:invalid+.erro-msg {
     flex-shrink: 0;
     height: 300px;
     object-fit: contain;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15%;
+    z-index: 9999;
+}
+
+#botaoanterior {
+    left: 10px;
+}
+
+#botaoproximo {
+    right: 10px;
+}
+
+.nav-btn:hover {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.9s ease;
+    box-shadow: 0 6px 18px var(--cor-sombra);
 }
 
 /* ==========================================
