@@ -203,15 +203,6 @@ th.cab {
     min-width: 0;
 }
 
-.lateral {
-    flex: 0 0 250px;
-    background: var(--cor-aside-fundo);
-    border: 1px solid var(--cor-aside-borda);
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
 .h1-falso {
     font-size: 28px;
     font-weight: 800;
@@ -243,11 +234,7 @@ h6 {
         box-shadow .3s ease;
 }
 
-<<<<<<< HEAD
-.cartao:hover {
-=======
 .botao:hover {
->>>>>>> main
     transform: scale(1.05);
     box-shadow: 0 6px 18px var(--cor-sombra);
 }
@@ -265,11 +252,29 @@ h6 {
     font-family: inherit;
 }
 
+.destaques-lista {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.destaques-lista li {
+    margin-bottom: 8px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
     margin: 14px 0;
     font-size: 14px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.table-responsive table {
+    min-width: 600px;
 }
 
 td {
@@ -280,17 +285,6 @@ td {
 .cab {
     background: #eef0f5;
     font-weight: 700;
-}
-
-input[type=text],
-input[type=email],
-input[type=password] {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid var(--cor-input-borda);
-    border-radius: 5px;
-    margin-bottom: 12px;
-    font-size: 14px;
 }
 
 .erro {
@@ -332,7 +326,7 @@ label {
 }
 
 fieldset {
-    border: 1px solid var(--cor-input-borda);
+    border: 1px solid var(--cor-fieldset-borda);
     border-radius: 5px;
     padding: 12px 14px;
     margin-bottom: 14px;
@@ -391,12 +385,13 @@ input:invalid+.erro-msg {
 }
 
 .carrossel {
-<<<<<<< HEAD
-=======
     position: relative;
->>>>>>> main
     overflow: hidden;
-    width: 100%;
+    max-width: 800px;
+    margin: 24px auto;
+
+    background:#005fcc;
+    border-radius: 8px;
 }
 
 .slides {
@@ -411,8 +406,6 @@ input:invalid+.erro-msg {
     object-fit: contain;
 }
 
-<<<<<<< HEAD
-=======
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -431,11 +424,11 @@ input:invalid+.erro-msg {
 }
 
 #botaoanterior {
-    left: 10px;
+    left: 70px;
 }
 
 #botaoproximo {
-    right: 10px;
+    right: 70px;
 }
 
 .nav-btn:hover {
@@ -481,35 +474,12 @@ small {
     font-weight: bold;
 }
 
-.erro-msg {
-    color: var(--cor-erro);
-    font-size: 12px;
-    margin: -6px 0 12px;
-    display: none;
-}
-
-input:invalid + .erro-msg {
-    display: block;
-}
-
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: 3px solid var(--cor-link);
     outline-offset: 2px;
-}
-
-fieldset {
-    border: 1px solid var(--cor-fieldset-borda);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-}
-
-legend {
-    font-weight: 700;
-    padding: 0 4px;
 }
 
 fieldset label {
@@ -557,7 +527,6 @@ input:invalid:not(:placeholder-shown) {
     border-color: var(--cor-erro);
 }
 
->>>>>>> main
 @media (prefers-color-scheme: dark) {
 
     :root {
@@ -641,5 +610,65 @@ input:invalid:not(:placeholder-shown) {
 
     .banner {
         animation: none;
+    }
+}
+
+
+/* Media Queries */
+/* Tablet */
+@media (max-width: 768px) {
+
+    #miolo {
+        flex-direction: column;
+    }
+
+    .banner img {
+        height: 250px;
+    }
+
+    .titulo-principal {
+        font-size: 24px;
+    }
+
+    #botaoanterior {
+    left: 10px;
+    }
+
+    #botaoproximo {
+    right: 10px;
+    }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+
+    .banner img {
+        height: 180px;
+    }
+
+    .titulo-principal {
+        font-size: 20px;
+    }
+
+    h2,
+    h3 {
+        font-size: 18px;
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    #botaoanterior {
+    left: 10px;
+    }
+
+    #botaoproximo {
+        right: 10px;
     }
 }
